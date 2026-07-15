@@ -1,3 +1,92 @@
-/* git remote add origin https://github.com/BijetaSah/personal-portfolio.git
-git branch -M main
-git push -u origin main */
+@import "tailwindcss";
+
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100..800&family=Roboto+Mono:wght@100..700&family=Orbitron:wght@400..900family=Share+Tech+Mono:wght@400..900&family=Poppins:wght@100..900&display=swap");
+
+@theme {
+  /* FONT */
+  --font-poppins: "Poppins", sans-serif;
+  --font-orbitron: "Orbitron", "Share Tech Mono";
+  --font-mono: "JetBrains Mono", monospace;
+  --font-roboto-mono: "Roboto Mono", monospace;
+
+  /* COLOR */
+  --color-background: #09090f;
+  --color-surface: #111118;
+  --color-primary: #00ff8c;
+  --color-secondary: #00cfff;
+  --color-accent: #ff00ff;
+  --color-text: #e0e0e0;
+  --color-muted: #6b7280;
+  --color-border: #27272a;
+  --color-background: #07070e;
+  --neon-glow: 0 0 5px hsl(153 100% 50%), 0 0 10px hsl(153 100% 50% / 0.25);
+  --neon-glow-sm: 0 0 3px hsl(153 100% 50%), 0 0 6px hsl(153 100% 50% / 0.19);
+  --neon-glow-lg:
+    0 0 10px hsl(153 100% 50%), 0 0 20px hsl(153 100% 50% / 0.37),
+    0 0 40px hsl(153 100% 50% / 0.19);
+  --neon-secondary:
+    0 0 5px hsl(300 100% 50%), 0 0 20px hsl(300 100% 50% / 0.37);
+  --neon-cyan: 0 0 5px hsl(195 100% 50%), 0 0 20px hsl(195 100% 50% / 0.37);
+}
+
+body {
+  @apply bg-background text-text font-mono;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@utility text-scanlines {
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    /* Draws fine dark lines right over the text layer */
+    background-image: repeating-linear-gradient(
+      to bottom,
+      transparent 0px,
+      transparent 2px,
+      rgba(0, 0, 0, 0.18) 2px,
+      rgba(0, 0, 0, 0.18) 4px
+    );
+    /* Stops the overlay from blocking text selection or clicks */
+    pointer-events: none;
+  }
+}
+
+/* Creates the sci-fi clipped corners (Top-Left and Bottom-Right) */
+@utility shape-cutout {
+  clip-path: polygon(
+    8px 0,
+    calc(100% - 8px) 0,
+    100% 8px,
+    100% calc(100% - 8px),
+    calc(100% - 8px) 100%,
+    8px 100%,
+    0 calc(100% - 8px),
+    0 8px
+  );
+}
+@layer base {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  span,
+  a,
+  li {
+    @apply text-scanlines;
+  }
+}
+
+@layer components {
+  .neon-text {
+    text-shadow: 0 0 10px hsl(153 100% 50% / 0.5);
+  }
+}
