@@ -20,6 +20,7 @@
   --color-muted: #6b7280;
   --color-border: #27272a;
   --color-background: #07070e;
+  --color-background-card: #101019;
   --neon-glow: 0 0 5px hsl(153 100% 50%), 0 0 10px hsl(153 100% 50% / 0.25);
   --neon-glow-sm: 0 0 3px hsl(153 100% 50%), 0 0 6px hsl(153 100% 50% / 0.19);
   --neon-glow-lg:
@@ -30,6 +31,9 @@
   --neon-cyan: 0 0 5px hsl(195 100% 50%), 0 0 20px hsl(195 100% 50% / 0.37);
   --neon-text-cyan: 0 0 10px hsl(195 100% 50% / 0.5);
   --text-shadow-sm: 0 0 2px hsl(153 100% 50%), 0 0 4px hsl(153 100% 50% / 0.3);
+  --text-shadow-secondary:
+    0 0 5px hsl(300 100% 50%), 0 0 20px hsl(300 100% 50% / 0.37);
+
   /* animation */
   --animate-blink: blink 1s step-end infinite;
   --animate-flicker: fast-flicker 5s infinite;

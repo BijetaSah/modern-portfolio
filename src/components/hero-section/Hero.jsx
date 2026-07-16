@@ -7,19 +7,21 @@ import Button from "../../ui/Button";
 import { AiOutlineDownload } from "react-icons/ai";
 import NavbarLinks from "../nav/NavbarLinks";
 import { GoDotFill } from "react-icons/go";
+import Container from "../../ui/Container";
 
 function Hero() {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden circuit-grid">
-      <div className="relative z-10 max-w-7xl mx-auto px-6 py-32">
+      <Container style={"py-32!"}>
+        <p className="text-muted text-sm uppercase tracking-widest flex items-center gap-5">
+          <span className="text-primary">$</span>whoami
+        </p>
         <div className="flex flex-col lg:flex-row items-start lg:items-center gap-16">
           {/* left side */}
           <div className="lg:w-3/5 space-y-10">
-            <h1 className="font-heading text-5xl md:text-7xl lg:text-8xl font-black uppercase tracking-widest leading-none mb-6">
+            <h1 className="font-orbitron text-5xl md:text-7xl lg:text-8xl font-black uppercase tracking-widest leading-none mb-6">
               <span className="text-foreground mr-5">Bijeta</span>
-              <span className="text-accent neon-text animate-rgb-shift">
-                sah
-              </span>
+              <span className="text-accent text-shadow-secondary ">sah</span>
             </h1>
             <div>
               <p className="font-orbitron text-xl md:text-2xl uppercase tracking-wide text-secondary">
@@ -86,7 +88,7 @@ function Hero() {
             </div>
           </div>
           {/* right side */}
-          <div className="hidden lg:block lg:w-2/5 text-sm text-muted relative">
+          <div className="hidden lg:block lg:w-2/5 text-sm text-muted relative ">
             <div className="absolute top-0.5 left-0.5 text-transparent border-t border-l w-4 border-primary ">
               .
             </div>
@@ -100,7 +102,7 @@ function Hero() {
             <div className="absolute bottom-0.5 right-0.5 text-transparent border-b border-r w-4 border-primary ">
               .
             </div>
-            <div className="border border-primary/30 shadow-(--neon-glow-sm) p-4">
+            <div className="border border-primary/30 shadow-(--neon-glow-sm) p-4 text-sm bg-muted/10 ">
               <p className="uppercase tracking-widest text-primary font-orbitron text-xs flex gap-3">
                 <span className="font-bold"> //</span>
                 system_status
@@ -114,7 +116,7 @@ function Hero() {
                 </p>
                 <p className="flex justify-between items-center ">
                   <span>company</span>{" "}
-                  <span className="text-secondary">Hypersonix Inc.</span>{" "}
+                  <span className="text-secondary">Hypersonix.AI</span>{" "}
                 </p>
                 <p className="flex justify-between items-center ">
                   <span>stack</span>{" "}
@@ -148,7 +150,7 @@ function Hero() {
             </div>
           </div>
         </div>
-      </div>
+      </Container>
       <div className="absolute animate-bounce text-primary bottom-0 left-[50%] translate-x-[-50%]">
         <FaChevronDown />
       </div>
