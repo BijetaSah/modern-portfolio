@@ -29,7 +29,9 @@ function Navbar() {
           <IoMenu />
         </Button>
 
-        {isOpen && <MobileNavBar />}
+        {isOpen && (
+          <MobileNavBar open={isOpen} onClose={() => setIsOpen(false)} />
+        )}
 
         <div className={` hidden lg:flex  items-center gap-8 }`}>
           {navbarLinks.map((link) => (
@@ -49,13 +51,15 @@ function Navbar() {
   );
 }
 
-function MobileNavBar() {
+function MobileNavBar({ open, onClose }) {
   return (
     <div
-      className={`flex flex-col absolute top-20 items-center gap-8 lg:hidden h-dvh w-full -translate-x-10`}
+      className={`flex flex-col fixed top-15 left-0 items-center justify-start pt-10 gap-8 lg:hidden h-[calc(100vh-5rem)] w-full bg-background border-r border-primary/10
+        transition-transform duration-300 ease-in-out z-40
+        ${open ? "translate-x-0" : "-translate-x-full"}`}
     >
       {navbarLinks.map((link) => (
-        <NavbarLinks link={link} key={link.id} />
+        <NavbarLinks link={link} key={link.id} onClick={onClose} />
       ))}
       <Button
         to={"#contact"}

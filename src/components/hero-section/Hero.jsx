@@ -26,8 +26,8 @@ function Hero() {
                 Frontend Developer
               </p>
               {/* skills section in hero */}
-              <div className="flex items-center font-mono text-sm text-muted gap-6 mt-4">
-                <span className="-mr-4 text-primary">
+              <div className="flex flex-wrap items-center font-mono text-sm text-muted gap-x-2 gap-y-2 lg:gap-6 mt-4">
+                <span className="lg:-mr-4 text-primary ">
                   <FaGreaterThan />
                 </span>
                 {heroSkills.map((item) => (
@@ -56,7 +56,7 @@ function Hero() {
               ))}
             </div>
             {/* Buttons */}
-            <div className="flex items-center gap-4">
+            <div className="flex flex-wrap items-center gap-4">
               <Button
                 to={"#projects"}
                 style={
@@ -76,7 +76,7 @@ function Hero() {
                 </span>
               </Button>
             </div>
-            <div className="flex gap-8 items-center">
+            <div className="flex gap-2 lg:gap-8 items-center">
               {socialLinks.map((link) => (
                 <NavbarLinks
                   link={link}
@@ -149,7 +149,7 @@ function Hero() {
           </div>
         </div>
       </div>
-      <div className="absolute animate-bounce text-primary bottom-0 left-[50%]">
+      <div className="absolute animate-bounce text-primary bottom-0 left-[50%] translate-x-[-50%]">
         <FaChevronDown />
       </div>
     </section>
