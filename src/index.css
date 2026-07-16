@@ -1,17 +1,17 @@
-@import "tailwindcss";
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100..800&family=Roboto+Mono:wght@100..700&family=Orbitron:wght@400..900&family=Share+Tech+Mono&family=Poppins:wght@100..900&display=swap");
 
-@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100..800&family=Roboto+Mono:wght@100..700&family=Orbitron:wght@400..900family=Share+Tech+Mono:wght@400..900&family=Poppins:wght@100..900&display=swap");
+@import "tailwindcss";
 
 @theme {
   /* FONT */
   --font-poppins: "Poppins", sans-serif;
-  --font-orbitron: "Orbitron", "Share Tech Mono";
+  --font-orbitron: "Orbitron", "Share Tech Mono", monospace;
   --font-mono: "JetBrains Mono", monospace;
   --font-roboto-mono: "Roboto Mono", monospace;
   --font-label: "Share Tech Mono", monospace;
 
   /* COLOR */
-  --color-background: #09090f;
+  --color-text-primary: #09090f;
   --color-surface: #111118;
   --color-primary: #00ff8c;
   --color-secondary: #00cfff;
@@ -28,6 +28,43 @@
   --neon-secondary:
     0 0 5px hsl(300 100% 50%), 0 0 20px hsl(300 100% 50% / 0.37);
   --neon-cyan: 0 0 5px hsl(195 100% 50%), 0 0 20px hsl(195 100% 50% / 0.37);
+  --neon-text-cyan: 0 0 10px hsl(195 100% 50% / 0.5);
+  --text-shadow-sm: 0 0 2px hsl(153 100% 50%), 0 0 4px hsl(153 100% 50% / 0.3);
+  /* animation */
+  --animate-blink: blink 1s step-end infinite;
+  --animate-flicker: fast-flicker 5s infinite;
+}
+@keyframes blink {
+  0%,
+  50% {
+    opacity: 1;
+  }
+
+  51%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes fast-flicker {
+  /* Rapid flicker phase (0s to 0.5s of the 5.5s loop) */
+  0%,
+  3%,
+  6%,
+  9% {
+    opacity: 1;
+  }
+  1.5%,
+  4.5%,
+  7.5% {
+    opacity: 0.1; /* Drops close to invisible */
+  }
+
+  /* Static holding phase (0.5s to 5.5s of the loop) */
+  10%,
+  100% {
+    opacity: 1; /* Stays solid for 5 seconds */
+  }
 }
 
 body {

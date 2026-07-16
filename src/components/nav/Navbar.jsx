@@ -16,7 +16,7 @@ function Navbar() {
       <div className="max-w-7xl mx-auto px-8 py-4 flex items-center justify-between">
         <a
           href="#"
-          className=" text-primary font-bold text-[20px] tracking-widest uppercase neon-text"
+          className=" text-primary font-orbitron font-bold text-[20px] tracking-widest uppercase neon-text"
         >
           Bijeta_Sah
         </a>
