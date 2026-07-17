@@ -14,11 +14,11 @@ export const navbarLinks = [
     title: "EXPERIENCE",
     href: "#experience",
   },
-  {
-    id: 4,
-    title: "PROJECTS",
-    href: "#projects",
-  },
+  // {
+  //   id: 4,
+  //   title: "PROJECTS",
+  //   href: "#projects",
+  // },
   {
     id: 5,
     title: "CONTACT",

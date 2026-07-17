@@ -192,7 +192,7 @@ function Hero() {
               <div className="space-y-5 mt-4 border-b border-muted/30 pb-4 ">
                 <p className="flex justify-between items-center ">
                   <span>role</span>{" "}
-                  <span className="text-primary text-shadow-sm">
+                  <span className="text-primary text-shadow-primary">
                     UI Developer
                   </span>{" "}
                 </p>

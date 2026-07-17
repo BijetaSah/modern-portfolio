@@ -33,7 +33,7 @@ function Contact() {
           <div className="flex gap-5 items-start ">
             <PiSuitcaseLight className="text-primary mt-2 text-xl" />
             <div className="space-y-3">
-              <p className="font-orbitron text-sm md:text-xl uppercase tracking-wide text-primary text-shadow-sm">
+              <p className="font-orbitron text-sm md:text-xl uppercase tracking-wide text-primary text-shadow-primary">
                 Open to Frontend Developer / SDE 1 opportunities
               </p>
               <p className="flex items-center text-muted gap-2 md:text-[15px] text-sm">

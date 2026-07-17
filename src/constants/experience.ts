@@ -1,0 +1,57 @@
+export const experiences = [
+  {
+    company: "Hypersonix.AI",
+    role: "UI Developer Intern",
+    duration: "jan 2026 – Present",
+    type: "Full-time",
+    location: "Remote",
+    description:
+      "Building and maintaining enterprise-grade features for a large multi-tenant SaaS platform with a strong focus on scalability, performance, and reusable component architecture.",
+    achievements: [
+      "Developed and shipped new features across pricing and competitor management modules.",
+      "Built a reusable feedback form with API integration and end-to-end state management.",
+      "Implemented a bulk decline workflow for competitor management, improving operational efficiency.",
+      "Enhanced a reusable data table by adding a 'Show Selected' feature with selected item count for improved usability.",
+      "Integrated REST APIs using TanStack Query with efficient server-state management and caching.",
+      "Resolved complex UI and state management bugs across a large-scale codebase while ensuring existing functionality remained unaffected.",
+      "Worked extensively with reusable components, shared state, and enterprise data flows in a multi-tenant architecture.",
+      "Collaborated closely with designers, backend engineers, and product managers to deliver production-ready features.",
+    ],
+    techStack: [
+      "React",
+      "TypeScript",
+      "Redux",
+      "Context API",
+      "TanStack Query",
+      "Styled Components",
+      "Tailwind CSS",
+    ],
+    color: "primary",
+  },
+  {
+    company: "CollegePur",
+    role: "Frontend Developer Intern",
+    location: "Remote",
+    duration: "Aug 2025 - Nov 2025 ",
+    type: "Internship",
+    description:
+      "Contributed to the development of responsive web pages and reusable UI components for the company's education platform.",
+    achievements: [
+      "Developed responsive and mobile-first pages using Next.js and TypeScript.",
+      "Built reusable UI components to improve consistency across the application.",
+      "Implemented application state management using Context API and Redux.",
+      "Collaborated with frontend developers to deliver features within sprint timelines.",
+      "Participated in code reviews, bug fixes, and UI improvements to enhance user experience.",
+      "Worked with Git-based workflows in an Agile development environment.",
+    ],
+    techStack: [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Redux",
+      "Context API",
+      "Tailwind CSS",
+    ],
+    color: "secondary",
+  },
+];
