@@ -8,6 +8,7 @@ import { AiOutlineDownload } from "react-icons/ai";
 import NavbarLinks from "../nav/NavbarLinks";
 import { GoDotFill } from "react-icons/go";
 import Container from "../../ui/Container";
+import Caret from "../../ui/Caret";
 
 function Hero() {
   return (
@@ -37,9 +38,7 @@ function Hero() {
                     {item.name} <LuDot />
                   </span>
                 ))}
-                <span className="bg-primary animate-blink w-2 text-transparent">
-                  .
-                </span>
+                <Caret />
               </div>
             </div>
             <p className="text-muted">

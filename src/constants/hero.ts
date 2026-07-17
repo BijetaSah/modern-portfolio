@@ -55,6 +55,7 @@ export const socialLinks = [
     href: "https://github.com/yourusername",
     icon: FiGithub,
     ariaLabel: "Visit my GitHub profile",
+    label: "bijetasah",
   },
   {
     id: 2,
@@ -62,6 +63,7 @@ export const socialLinks = [
     href: "https://linkedin.com/in/yourusername",
     icon: FiLinkedin,
     ariaLabel: "Visit my LinkedIn profile",
+    label: "bijetasah",
   },
   {
     id: 3,
@@ -69,5 +71,6 @@ export const socialLinks = [
     href: "mailto:yourname@gmail.com",
     icon: LuMail,
     ariaLabel: "Send me an email",
+    label: "bijetasah30@gmail.com",
   },
 ];

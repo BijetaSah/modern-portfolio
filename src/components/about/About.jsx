@@ -3,12 +3,13 @@ import SectionContainer from "../../ui/SectionContainer";
 import Container from "../../ui/Container";
 import LeftContianer from "./LeftContianer";
 import RightContainer from "./RightContainer";
+import SubHeading from "../../ui/SubHeading";
 
 function About() {
   return (
-    <SectionContainer sectionId={"#about"}>
+    <SectionContainer sectionId={"about"}>
       <Container>
-        <h2 className="font-orbitron text-4xl md:text-5xl font-bold uppercase tracking-wide text-foreground flex items-center gap-2">
+        <SubHeading>
           <span className="text-primary text-[16px]">
             {" "}
             <LuUserRound />
@@ -16,7 +17,7 @@ function About() {
           <span>
             about<span className="text-primary ">_</span>me
           </span>
-        </h2>
+        </SubHeading>
 
         <div className="grid grid-cols-1 lg:grid-cols-5 lg:gap-16 mt-10 gap-y-10">
           <LeftContianer />
