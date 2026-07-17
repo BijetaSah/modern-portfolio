@@ -23,7 +23,7 @@ export const heroSkills = [
 export const heroHighlights = [
   {
     id: 1,
-    label: "6 Months Experience",
+    label: "< 1 years experience",
     icon: "✓",
   },
   {

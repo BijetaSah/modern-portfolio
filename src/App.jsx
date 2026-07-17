@@ -3,6 +3,7 @@ import Contact from "./components/contact/Contact";
 import Footer from "./components/footer/Footer";
 import Hero from "./components/hero-section/Hero";
 import Navbar from "./components/nav/Navbar";
+import TechStack from "./components/tech-stack/TechStack";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <main>
         <Hero />
         <About />
+        <TechStack />
         <Contact />
         <Footer />
       </main>
