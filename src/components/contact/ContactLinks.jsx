@@ -7,6 +7,7 @@ function ContactLinks() {
         <a
           key={item.id}
           className="shape-cutout border border-border bg-background-card p-5 flex items-center gap-4 hover:border-primary transition-all duration-150 group "
+          href={item.href}
         >
           <div className="w-10 h-10 flex items-center justify-center border border-primary/30 text-primary group-hover:bg-primary group-hover:text-background transition-all duration-150">
             {<item.icon />}
