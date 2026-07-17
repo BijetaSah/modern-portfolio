@@ -5,9 +5,12 @@ function RightContainer() {
     <>
       {/* stats */}
       <div className="lg:col-span-2">
-        <div className="space-y-10">
+        <div className="space-y-5">
           {aboutStats.map((item) => (
-            <div className="shape-cutout border border-border bg-background-card p-5 hover:border-primary transition-colors duration-150">
+            <div
+              className="shape-cutout border border-border bg-background-card p-5 hover:border-primary transition-colors duration-150"
+              key={item.id}
+            >
               <span className="font-label text-sm uppercase tracking-[0.2em] text-muted mb-1">
                 {item.title}
               </span>

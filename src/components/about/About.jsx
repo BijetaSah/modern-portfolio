@@ -18,7 +18,7 @@ function About() {
           </span>
         </h2>
 
-        <div className="grid grid-cols-1 lg:grid-cols-5 lg:gap-16 mt-10">
+        <div className="grid grid-cols-1 lg:grid-cols-5 lg:gap-16 mt-10 gap-y-10">
           <LeftContianer />
           <RightContainer />
         </div>

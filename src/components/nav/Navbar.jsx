@@ -6,7 +6,7 @@ import { IoMenu } from "react-icons/io5";
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
-  console.log(screen.width);
+
   function handleMobileNavButtonClick() {
     setIsOpen((prev) => !prev);
   }

@@ -14,7 +14,7 @@ function LeftContianer() {
         </div>
         <div className="p-6 font-mono text-[16px] leading-relaxed space-y-4">
           {aboutHighlights.map((item) => (
-            <span className="flex gap-2 items-start text-muted">
+            <span className="flex gap-2 items-start text-muted" key={item.id}>
               <span className="text-primary text-xs mt-2">
                 <FaGreaterThan />
               </span>
