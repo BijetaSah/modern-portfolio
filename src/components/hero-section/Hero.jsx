@@ -13,15 +13,15 @@ function Hero() {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden circuit-grid">
       <Container style={"py-32!"}>
-        <p className="text-muted text-sm uppercase tracking-widest flex items-center gap-5">
+        <p className="text-muted text-sm uppercase tracking-widest flex flex-wrap items-center gap-5">
           <span className="text-primary">$</span>whoami
         </p>
-        <div className="flex flex-col lg:flex-row items-start lg:items-center gap-16">
+        <div className="flex flex-col lg:flex-row items-start gap-12 lg:items-center lg:gap-16">
           {/* left side */}
-          <div className="lg:w-3/5 space-y-10">
-            <h1 className="font-orbitron text-5xl md:text-7xl lg:text-8xl font-black uppercase tracking-widest leading-none mb-6">
-              <span className="text-foreground mr-5">Bijeta</span>
-              <span className="text-accent text-shadow-secondary ">sah</span>
+          <div className="w-full lg:w-3/5 space-y-10">
+            <h1 className="font-orbitron text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-black uppercase tracking-widest leading-none mb-6">
+              <span className="text-text mr-5">Bijeta</span>
+              <span className="text-accent animate-rgb-glitch">sah</span>
             </h1>
             <div>
               <p className="font-orbitron text-xl md:text-2xl uppercase tracking-wide text-secondary">
@@ -82,6 +82,7 @@ function Hero() {
               {socialLinks.map((link) => (
                 <NavbarLinks
                   link={link}
+                  key={link.id}
                   style={"text-xs! flex items-center gap-2"}
                 />
               ))}
