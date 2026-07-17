@@ -1,8 +1,15 @@
 import { socialLinks } from "../../constants/hero";
+import { motion } from "motion/react";
 
 function ContactLinks() {
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-3 max-w-4xl gap-5">
+    <motion.div
+      initial={{ y: 40, opacity: 0 }}
+      whileInView={{ y: 0, opacity: 1 }}
+      transition={{ duration: 0.3 }}
+      viewport={{ once: true, amount: 0.3 }}
+      className="grid grid-cols-1 lg:grid-cols-3 max-w-4xl gap-5"
+    >
       {socialLinks.map((item) => (
         <a
           key={item.id}
@@ -22,7 +29,7 @@ function ContactLinks() {
           </div>
         </a>
       ))}
-    </div>
+    </motion.div>
   );
 }
 export default ContactLinks;

@@ -1,10 +1,16 @@
 import { aboutStats } from "../../constants/about";
-
+import { motion } from "motion/react";
 function RightContainer() {
   return (
     <>
       {/* stats */}
-      <div className="lg:col-span-2">
+      <motion.div
+        initial={{ x: 100, opacity: 0 }}
+        whileInView={{ x: 0, opacity: 1 }}
+        transition={{ duration: 0.5 }}
+        viewport={{ once: true, amount: 0.2 }}
+        className="lg:col-span-2"
+      >
         <div className="space-y-5">
           {aboutStats.map((item) => (
             <div
@@ -23,7 +29,7 @@ function RightContainer() {
             </div>
           ))}
         </div>
-      </div>
+      </motion.div>
     </>
   );
 }

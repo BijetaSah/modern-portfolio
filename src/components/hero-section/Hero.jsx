@@ -1,12 +1,14 @@
 import { FaChevronDown, FaGreaterThan, FaLessThan } from "react-icons/fa6";
 import { LuDot } from "react-icons/lu";
+import { AiOutlineDownload } from "react-icons/ai";
+import { GoDotFill } from "react-icons/go";
+
+import { motion } from "motion/react";
 
 import { heroHighlights, heroSkills, socialLinks } from "../../constants/hero";
 
 import Button from "../../ui/Button";
-import { AiOutlineDownload } from "react-icons/ai";
 import NavbarLinks from "../nav/NavbarLinks";
-import { GoDotFill } from "react-icons/go";
 import Container from "../../ui/Container";
 import Caret from "../../ui/Caret";
 
@@ -20,11 +22,38 @@ function Hero() {
         <div className="flex flex-col lg:flex-row items-start gap-12 lg:items-center lg:gap-16">
           {/* left side */}
           <div className="w-full lg:w-3/5 space-y-10">
-            <h1 className="font-orbitron text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-black uppercase tracking-widest leading-none mb-6">
+            <motion.h1
+              initial={{
+                y: 50,
+                opacity: 0,
+              }}
+              animate={{
+                y: 0,
+                opacity: 1,
+              }}
+              transition={{
+                duration: 0.5,
+                ease: [0.22, 1, 0.36, 1],
+              }}
+              className="font-orbitron text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-black uppercase tracking-widest leading-none mb-6"
+            >
               <span className="text-text mr-5">Bijeta</span>
               <span className="text-accent animate-rgb-glitch">sah</span>
-            </h1>
-            <div>
+            </motion.h1>
+            <motion.div
+              initial={{
+                y: 30,
+                opacity: 0,
+              }}
+              animate={{
+                y: 0,
+                opacity: 1,
+              }}
+              transition={{
+                duration: 0.5,
+                ease: [0.22, 1, 0.36, 1],
+              }}
+            >
               <p className="font-orbitron text-xl md:text-2xl uppercase tracking-wide text-secondary">
                 Frontend Developer
               </p>
@@ -40,13 +69,27 @@ function Hero() {
                 ))}
                 <Caret />
               </div>
-            </div>
+            </motion.div>
             <p className="text-muted">
               Building modern and scalable web applications with
               performance-first architecture.
             </p>
 
-            <div className="flex flex-wrap items-center gap-4">
+            <motion.div
+              className="flex flex-wrap items-center gap-4"
+              initial={{
+                y: 20,
+                opacity: 0,
+              }}
+              animate={{
+                y: 0,
+                opacity: 1,
+              }}
+              transition={{
+                duration: 0.5,
+                ease: [0.22, 1, 0.36, 1],
+              }}
+            >
               {heroHighlights.map((item) => (
                 <span
                   key={item.id}
@@ -55,9 +98,23 @@ function Hero() {
                   {item.icon} {item.label}
                 </span>
               ))}
-            </div>
+            </motion.div>
             {/* Buttons */}
-            <div className="flex flex-wrap items-center gap-4">
+            <motion.div
+              className="flex flex-wrap items-center gap-4"
+              initial={{
+                y: 10,
+                opacity: 0,
+              }}
+              animate={{
+                y: 0,
+                opacity: 1,
+              }}
+              transition={{
+                duration: 0.5,
+                ease: [0.22, 1, 0.36, 1],
+              }}
+            >
               <Button
                 to={"#projects"}
                 style={
@@ -76,8 +133,22 @@ function Hero() {
                   Download resume
                 </span>
               </Button>
-            </div>
-            <div className="flex gap-2 lg:gap-8 items-center">
+            </motion.div>
+            <motion.div
+              className="flex gap-2 lg:gap-8 items-center"
+              initial={{
+                y: 10,
+                opacity: 0,
+              }}
+              animate={{
+                y: 0,
+                opacity: 1,
+              }}
+              transition={{
+                duration: 0.5,
+                ease: [0.22, 1, 0.36, 1],
+              }}
+            >
               {socialLinks.map((link) => (
                 <NavbarLinks
                   link={link}
@@ -85,10 +156,21 @@ function Hero() {
                   style={"text-xs! flex items-center gap-2"}
                 />
               ))}
-            </div>
+            </motion.div>
           </div>
           {/* right side */}
-          <div className="hidden lg:block lg:w-2/5 text-sm text-muted relative ">
+          <motion.div
+            initial={{
+              x: 100,
+              opacity: 0,
+            }}
+            animate={{
+              x: 0,
+              opacity: 1,
+            }}
+            transition={{ duration: 0.3 }}
+            className="hidden lg:block lg:w-2/5 text-sm text-muted relative "
+          >
             <div className="absolute top-0.5 left-0.5 text-transparent border-t border-l w-4 border-primary ">
               .
             </div>
@@ -148,7 +230,7 @@ function Hero() {
                 </span>
               </p>
             </div>
-          </div>
+          </motion.div>
         </div>
       </Container>
       <div className="absolute animate-bounce text-primary bottom-0 left-[50%] translate-x-[-50%]">

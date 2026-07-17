@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { navbarLinks } from "../../constants/navbar";
 import Button from "../../ui/Button";
 import NavbarLinks from "./NavbarLinks";
@@ -6,13 +6,26 @@ import { IoMenu } from "react-icons/io5";
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const [isScroll, setIsScroll] = useState(0);
+
+  useEffect(() => {
+    function handleScroll() {
+      setIsScroll(window.scrollY);
+    }
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   function handleMobileNavButtonClick() {
     setIsOpen((prev) => !prev);
   }
 
   return (
-    <nav className="fixed top-0 left-0 w-full z-50 bg-background">
+    <nav
+      className={`fixed top-0 left-0 w-full z-50 ${isScroll > 30 ? "bg-background/50 backdrop-blur-sm border-b border-border" : " bg-background"} `}
+    >
       <div className="max-w-7xl mx-auto px-8 py-4 flex items-center justify-between">
         <a
           href="#"
