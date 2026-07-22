@@ -135,7 +135,7 @@ function Hero() {
               </Button>
             </motion.div>
             <motion.div
-              className="flex gap-2 lg:gap-8 items-center"
+              className="flex gap-2 lg:gap-8 items-center ml-10 md:ml-20"
               initial={{
                 y: 10,
                 opacity: 0,

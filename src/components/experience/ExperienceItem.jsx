@@ -8,7 +8,6 @@ const colorClasses = {
 };
 
 function ExperienceItem({ item, variant }) {
-  console.log(item);
   return (
     <motion.div
       variants={variant}

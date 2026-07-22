@@ -7,7 +7,7 @@ function NavbarLinks({ link, style, onClick }) {
         aria-label={link.ariaLabel || link.title}
         onClick={onClick}
       >
-        {link.icon && <link.icon />} {link.title} |
+        {link.icon && <link.icon />} {link.title}
       </a>
     );
   return (
