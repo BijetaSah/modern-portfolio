@@ -135,7 +135,7 @@ function Hero() {
               </Button>
             </motion.div>
             <motion.div
-              className="flex gap-2 lg:gap-8 items-center ml-10 md:ml-20"
+              className="flex gap-2 lg:gap-8 items-center "
               initial={{
                 y: 10,
                 opacity: 0,
@@ -154,7 +154,7 @@ function Hero() {
                   link={link}
                   key={link.id}
                   showTitle={true}
-                  style={"text-xs! flex items-center gap-2"}
+                  style={"text-[10px]! md:text-sm flex items-center gap-2"}
                 />
               ))}
             </motion.div>
