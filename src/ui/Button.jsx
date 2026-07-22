@@ -4,7 +4,7 @@ function Button({ children, style, onClick, to, ariaLabel }) {
 
   if (to)
     return (
-      <a href={to} className={` ${baseStyles} ${style} `}>
+      <a href={to} className={` ${baseStyles} ${style} `} onClick={onClick}>
         {children}
       </a>
     );

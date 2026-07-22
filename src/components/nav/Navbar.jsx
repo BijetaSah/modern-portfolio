@@ -79,6 +79,7 @@ function MobileNavBar({ open, onClose }) {
         style={
           "shape-cutout border-2 border-primary hover:bg-primary hover:text-background shadow-(--neon-glow-sm)"
         }
+        onClick={() => onClose()}
       >
         hire me
       </Button>

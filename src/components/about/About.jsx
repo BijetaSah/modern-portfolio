@@ -7,7 +7,7 @@ import SubHeading from "../../ui/SubHeading";
 
 function About() {
   return (
-    <SectionContainer sectionId={"about"}>
+    <SectionContainer sectionId={"about"} style={"overflow-x-hidden"}>
       <Container>
         <SubHeading>
           <span className="text-primary text-[16px]">

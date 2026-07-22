@@ -51,7 +51,7 @@ function Experience() {
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, amount: "some" }}
+            viewport={{ once: true, amount: 0.05 }}
           >
             {experiences.map((experience, i) => (
               <ExperienceItem

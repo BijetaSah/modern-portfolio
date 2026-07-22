@@ -1,11 +1,18 @@
 import { PiDotOutlineFill, PiGreaterThan } from "react-icons/pi";
 import { motion } from "motion/react";
 
+const colorClasses = {
+  primary: "hover:border-primary shadow-neon-glow-primary",
+  secondary: "hover:border-secondary shadow-neon-glow-secondary",
+  accent: "hover:border-accent shadow-neon-glow-accent",
+};
+
 function ExperienceItem({ item, variant }) {
+  console.log(item);
   return (
     <motion.div
       variants={variant}
-      className={`border border-border shape-cutout bg-background-card p-6 md:p-8 hover:border-${item.color} transition-colors duration-300 shadow-neon-glow-${item.color} `}
+      className={`border border-border shape-cutout bg-background-card p-6 md:p-8 ${colorClasses[item.color]} transition-colors duration-300 shadow-neon-glow-${item.color} `}
     >
       {/* heading */}
       <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-6">
@@ -34,7 +41,7 @@ function ExperienceItem({ item, variant }) {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{
-              duration: 0.5,
+              duration: 0.3,
               delay: i * 0.1,
               ease: [0.22, 1, 0.36, 1],
             }}
@@ -52,8 +59,9 @@ function ExperienceItem({ item, variant }) {
       {/* tech stack */}
       <motion.div
         initial={{ y: 10, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.3 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.5 }}
+        viewport={{ once: true }}
         className="flex flex-wrap gap-2 mt-6 pt-4 border-t border-border"
       >
         {item.techStack.map((tech, i) => (
