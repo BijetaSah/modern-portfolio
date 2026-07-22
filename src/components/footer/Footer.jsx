@@ -12,6 +12,7 @@ function Footer() {
             key={item.id}
             link={item}
             style={"text-xs! md:text-sm!"}
+            showTitle={false}
           />
         ))}
       </div>

@@ -1,4 +1,4 @@
-function NavbarLinks({ link, style, onClick }) {
+function NavbarLinks({ link, style, onClick, showTitle = true }) {
   if (link.ariaLabel)
     return (
       <a
@@ -7,7 +7,8 @@ function NavbarLinks({ link, style, onClick }) {
         aria-label={link.ariaLabel || link.title}
         onClick={onClick}
       >
-        {link.icon && <link.icon />} {link.title}
+        {link.icon && <link.icon />} {showTitle && link.title}{" "}
+        {showTitle && "|"}
       </a>
     );
   return (

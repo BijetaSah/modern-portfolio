@@ -153,6 +153,7 @@ function Hero() {
                 <NavbarLinks
                   link={link}
                   key={link.id}
+                  showTitle={true}
                   style={"text-xs! flex items-center gap-2"}
                 />
               ))}

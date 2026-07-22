@@ -51,7 +51,7 @@ export const heroHighlights = [
 export const socialLinks = [
   {
     id: 1,
-    // title: "GitHub",
+    title: "GitHub",
     href: "https://github.com/BijetaSah/",
     icon: FiGithub,
     ariaLabel: "Visit my GitHub profile",
@@ -59,7 +59,7 @@ export const socialLinks = [
   },
   {
     id: 2,
-    // title: "LinkedIn",
+    title: "LinkedIn",
     href: "https://www.linkedin.com/in/bijeta-sah",
     icon: FiLinkedin,
     ariaLabel: "Visit my LinkedIn profile",
@@ -67,7 +67,7 @@ export const socialLinks = [
   },
   {
     id: 3,
-    // title: "Email",
+    title: "Email",
     href: "mailto:yourname@gmail.com",
     icon: LuMail,
     ariaLabel: "Send me an email",
